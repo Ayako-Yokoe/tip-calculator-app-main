@@ -47,7 +47,7 @@ function sanitizeInput(inputElement, inputValue) {
 }
 
 bill.addEventListener("input", (e) => {
-    let billAmount = sanitizeInput(e.target, e.target.value);
+    billAmount = sanitizeInput(e.target, e.target.value);
     updateCalculations(billAmount, tip, numOfPeople);
 });
 

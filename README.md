@@ -4,14 +4,14 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ## Table of contents
 
--   [Overview](#overview)
-    -   [The challenge](#the-challenge)
-    -   [Screenshot](#screenshot)
-    -   [Links](#links)
--   [My process](#my-process)
-    -   [Built with](#built-with)
-    -   [What I learned](#what-i-learned)
-    -   [Continued development](#continued-development)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
 ## Overview
 
@@ -19,9 +19,9 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 Users should be able to:
 
--   View the optimal layout for the app depending on their device's screen size
--   See hover states for all interactive elements on the page
--   Calculate the correct tip and total cost of the bill per person
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Calculate the correct tip and total cost of the bill per person
 
 ### Screenshot
 
@@ -30,18 +30,18 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/Ayako-Yokoe/tip-calculator-app-main)
+- Live Site URL: [Vercel](https://tip-calculator-app-seven-swart.vercel.app/)
 
 ## My process
 
 ### Built with
 
--   Semantic HTML5 markup
--   CSS custom properties
--   Flexbox
--   CSS Grid
--   Mobile-first workflow
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
 ### What I learned
 
@@ -51,47 +51,48 @@ Additionally, validating input numbers, such as decimals and limiting numbers st
 
 ```html
 <li id="custom">
-    <button class="custom-btn" id="custom-btn">Custom</button>
+  <button class="custom-btn" id="custom-btn">Custom</button>
 
-    <input
-        class="custom-input"
-        id="custom-input"
-        type="number"
-        placeholder="0"
-        style="display: none; width: 100%"
-    />
+  <input
+    class="custom-input"
+    id="custom-input"
+    type="number"
+    placeholder="0"
+    style="display: none; width: 100%"
+  />
 </li>
 ```
 
 ```js
 customBtn.addEventListener("click", (e) => {
-    tip = parseInt(e.target.getAttribute("data-tip"), 10);
-    updateCalculations(billAmount, tip, numOfPeople);
+  tip = parseInt(e.target.getAttribute("data-tip"), 10)
+  updateCalculations(billAmount, tip, numOfPeople)
 
-    customInput.style.display = "inline-block";
-    customInput.focus();
-    customBtn.style.display = "none";
+  customInput.style.display = "inline-block"
+  customInput.focus()
+  customBtn.style.display = "none"
 
-    customInput.addEventListener("input", (e) => {
-        e.target.value = e.target.value.replace(/^0+/, "");
+  customInput.addEventListener("input", (e) => {
+    e.target.value = e.target.value.replace(/^0+/, "")
 
-        if (e.target.value === "" || isNaN(Number(e.target.value))) {
-            tip = 0;
-        } else {
-            tip = Number(e.target.value);
-        }
+    if (e.target.value === "" || isNaN(Number(e.target.value))) {
+      tip = 0
+    } else {
+      tip = Number(e.target.value)
+    }
 
-        let validBillAmount = billAmount || 0;
-        let validNumOfPeople = numOfPeople || 1;
+    let validBillAmount = billAmount || 0
+    let validNumOfPeople = numOfPeople || 1
 
-        updateCalculations(validBillAmount, tip, validNumOfPeople);
-    });
+    updateCalculations(validBillAmount, tip, validNumOfPeople)
+  })
 
-    enableReset();
-});
+  enableReset()
+})
 ```
 
 ### Continued development
 
 As part of the purpose of this project, I focused on refactoring functions. I will continue learning how to make the code more readable.
+
 # tip-calculator-app-main
