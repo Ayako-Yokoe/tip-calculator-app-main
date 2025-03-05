@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Ayako-Yokoe/tip-calculator-app-main)
-- Live Site URL: [Vercel](https://tip-calculator-app-seven-swart.vercel.app/)
+- Live Site URL: [Vercel](https://tip-calculator-app-2.vercel.app/)
 
 ## My process
 
